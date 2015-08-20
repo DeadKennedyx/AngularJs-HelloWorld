@@ -1,0 +1,14 @@
+<div id="particles-js"></div>
+<ul>
+  <li ng-repeat="activity in todo">
+    {{activity.description}}
+    {{activity.date | date}}
+  </li>
+  <form ng-submit="addActv()">
+    <input type="text" ng-model="newActv.description">
+    <input type="datetime-local" ng-model="newActv.date">
+    <input type="submit" value="Save new ToDo item">
+  </form>
+  <button ng-click="clean()">Clean</button>
+
+</ul>
